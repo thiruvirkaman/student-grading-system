@@ -1,7 +1,8 @@
+message = "Please enter a mark between 0 and 100"
 try:
-    mark = int(input("Enter your mark: "))  
+    mark = float(input("Enter your mark: ")) 
     if mark < 0 or mark > 100:
-        print("Invalid mark. Please enter a mark between 0 and 100.")
+        print("Invalid mark. ", message)
     elif mark >= 90 and mark <= 100:
         print("Grade: A")
     elif mark >= 80 and mark <=89:
@@ -13,4 +14,4 @@ try:
     else:
         print("Grade: E")
 except ValueError as e:
-    print("Invalid input. Please enter a valid integer mark.")
+    print("Invalid input. ", message)
